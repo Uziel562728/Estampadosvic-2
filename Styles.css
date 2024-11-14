@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* Fondo blanco */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(45deg, #d4af37 25%, transparent 25%), linear-gradient(-45deg, #d4af37 25%, transparent 25%);
+    background-size: 20px 20px; /* Tamaño de las líneas diagonales */
+    background-position: 0 0, 10px 10px; /* Posición de las líneas */
+    background-repeat: repeat; /* Repetir las líneas */
+}
+
+header {
+    background-color: #333;
+    color: gold; /* Texto dorado */
+    padding: 1.5em;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.productos, .formulario {
+    margin: 2em 0;
+    width: 90%;
+    max-width: 600px;
+}
+
+.productos h2, .formulario h2 {
+    margin-bottom: 1em;
+}
+
+.camiseta {
+    background-color: #000; /* Fondo negro para los productos */
+    color: white; /* Texto blanco */
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Resaltar los subtítulos del formulario */
+form label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+    font-weight: bold; /* Negrita */
+    font-size: 1.1em; /* Tamaño de letra más grande */
+    color: #000; /* Color negro para los subtítulos */
+    text-transform: uppercase; /* Convertir los subtítulos a mayúsculas */
+}
+
+/* Efecto cuando el campo está seleccionado */
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #d4af37; /* Borde dorado */
+    outline: none; /* Eliminar el borde por defecto */
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+form button {
+    background-color: #000; /* Botón negro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo de pie de página */
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer img {
+    width: 30px;
+    vertical-align: middle;
+}
+
+footer a {
+    text-decoration: none;
+    color: #007BFF; /* Azul */
+    font-size: 1.1em;
+}
+
+footer a:hover {
+    color: #0056b3; /* Azul más oscuro al pasar el mouse */
+}
