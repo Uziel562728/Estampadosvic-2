@@ -2,95 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Camisetas Estampadas</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Estilos para la ventana emergente */
-        .modal {
-            display: none; /* Oculta la ventana por defecto */
-            position: fixed;
-            z-index: 1; /* Asegura que esté sobre el contenido */
-            left: 0;
-            top: 0;
-            width: 100%; /* Ancho completo */
-            height: 100%; /* Alto completo */
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-            overflow: auto; /* Permite desplazamiento si es necesario */
-            padding-top: 100px;
-        }
-
-        /* Contenedor de la ventana emergente */
-        .modal-content {
-            background-color: #fff;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 400px;
-            text-align: center;
-            border-radius: 10px;
-        }
-
-        /* Estilo del botón de cierre */
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .modal p {
-            color: green; /* Mensaje de agradecimiento en color verde */
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-
-        /* Estilos para el texto y el logo de WhatsApp */
-        .whatsapp-info {
-            margin-top: 20px;
-            color: #333;
-            font-size: 1.1em;
-        }
-
-        .whatsapp-info a {
-            text-decoration: none;
-            color: #25D366; /* Verde WhatsApp */
-            font-weight: bold;
-        }
-
-        .whatsapp-info img {
-            width: 30px;
-            vertical-align: middle;
-            margin-left: 10px;
-        }
-    </style>
-    <script>
-        // Función para mostrar la ventana emergente
-        function mostrarMensaje(event) {
-            event.preventDefault(); // Evita el envío del formulario de inmediato
-            document.getElementById("miModal").style.display = "block"; // Muestra la ventana emergente
-
-            // Después de mostrar la ventana emergente, enviamos el formulario
-            setTimeout(function() {
-                // Obtiene el formulario y envíalo a Formspree
-                document.getElementById("pedidoForm").submit(); 
-            }, 1000); // Espera 1 segundo antes de enviar para asegurar que el mensaje se vea
-        }
-
-        // Función para cerrar la ventana emergente y redirigir a la página principal
-        function cerrarModal() {
-            document.getElementById("miModal").style.display = "none"; // Cierra la ventana emergente
-            window.location.href = '/'; // Redirige a la página principal (ajustar el enlace según sea necesario)
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -116,7 +28,7 @@
 
     <section class="formulario">
         <h2>Realiza tu pedido</h2>
-        <form id="pedidoForm" action="https://formspree.io/f/xvgorbja" method="POST" onsubmit="mostrarMensaje(event)">
+        <form id="pedidoForm" action="https://formspree.io/f/xvgorbja" method="POST">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
 
@@ -140,30 +52,17 @@
         </form>
     </section>
 
-    <!-- Ventana emergente -->
-    <div id="miModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="cerrarModal()">&times;</span>
-            <p>¡Gracias por realizar su pedido!</p>
-            <div class="whatsapp-info">
-                <p>Para más información contáctanos</p>
-                <a href="https://wa.me/5491154943154" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-                    +54 9 11 5494-3154
-                </a>
-            </div>
+    <div id="miModal">
+        <p>¡Gracias por realizar su pedido!</p>
+        <div>
+            <p>Para más información contáctanos</p>
+            <a href="https://wa.me/5491154943154" target="_blank">+54 9 11 5494-3154</a>
         </div>
     </div>
 
-    <!-- Sección de pie de página con el color de fondo negro -->
-    <div class="contacto" style="background-color: #000; color: white; padding: 20px; width: 100%; text-align: center;">
-        <footer>
-            <p>Contacto:</p>
-            <a href="https://wa.me/5491154943154" target="_blank" style="text-decoration: none;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 30px; vertical-align: middle;">
-                +54 9 11 5494-3154
-            </a>
-        </footer>
-    </div>
+    <footer>
+        <p>Contacto:</p>
+        <a href="https://wa.me/5491154943154" target="_blank">+54 9 11 5494-3154</a>
+    </footer>
 </body>
 </html>
